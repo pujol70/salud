@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Espacio para tu foto">
+<rect width="400" height="400" fill="#ECE8DF"/>
+<circle cx="330" cy="70" r="90" fill="#fff" opacity=".25"/>
+<path d="M60 400 q0 -110 140 -110 q140 0 140 110z" fill="#2E4A5C"/>
+<path d="M170 296 l30 40 l30 -40z" fill="#FDFCFA" opacity=".9"/>
+<rect x="178" y="236" width="44" height="64" rx="18" fill="#D9C3A8"/>
+
+<ellipse cx="200" cy="178" rx="52" ry="62" fill="#D9C3A8"/>
+<circle cx="200" cy="86" r="22" fill="#2B2420"/><path d="M150 150 q0 -50 50 -50 q50 0 50 50 q-22 -26 -50 -26 q-28 0 -50 26z" fill="#2B2420"/>
+<circle cx="182" cy="182" r="4" fill="#1F2A33"/><circle cx="218" cy="182" r="4" fill="#1F2A33"/>
+<path d="M186 210 q14 12 28 0" stroke="#1F2A33" stroke-width="4" fill="none" stroke-linecap="round"/>
+</svg>

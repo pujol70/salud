@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /demo-clinica.html
+Disallow: /demo-inmobiliaria.html
+
+Sitemap: https://TU_DOMINIO/sitemap.xml

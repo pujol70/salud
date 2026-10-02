@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Retrato ilustrado de profesional">
+<rect width="400" height="400" fill="#EBDCD3"/>
+<circle cx="330" cy="70" r="90" fill="#fff" opacity=".25"/>
+<path d="M60 400 q0 -110 140 -110 q140 0 140 110z" fill="#7F9784"/>
+<path d="M170 296 l30 40 l30 -40z" fill="#FDFCFA" opacity=".9"/>
+<rect x="178" y="236" width="44" height="64" rx="18" fill="#E2C7AE"/>
+<path d="M148 160 q-6 -70 52 -70 q58 0 52 70 v70 q-12 10 -26 4 v-74 q-26 -10 -52 0 v74 q-14 6 -26 -4z" fill="#5B3A2E"/>
+<ellipse cx="200" cy="178" rx="52" ry="62" fill="#E2C7AE"/>
+
+<circle cx="182" cy="182" r="4" fill="#1F2A33"/><circle cx="218" cy="182" r="4" fill="#1F2A33"/>
+<path d="M186 210 q14 12 28 0" stroke="#1F2A33" stroke-width="4" fill="none" stroke-linecap="round"/>
+</svg>
