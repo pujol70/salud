@@ -203,8 +203,15 @@ export const siteData = {
     maintenanceMinTerm: "Contrato mínimo de 6 meses",
     billingDay: "Cobro por adelantado el día 5",
     hoursRule: "Las horas no usadas no se acumulan",
-    firstMonthFreeCondition: "Primer mes gratis del plan que elijas, si contratas un proyecto nuevo."
+    firstMonthFreeCondition: "Primer mes gratis si contratas una web, con el plan que le corresponde"
   },
+
+  // Primer mes de mantenimiento gratis: cada tipo de web va con el plan del mismo orden de precio
+  freeMonthPlanByProject: {
+    presencia: "esencial",
+    profesional: "pro",
+    tienda: "crecimiento"
+  } as Record<string, string>,
 
   // Programa piloto
   pilotProgram: {

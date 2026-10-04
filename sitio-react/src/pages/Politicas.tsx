@@ -64,7 +64,7 @@ export const Politicas: React.FC<PoliticasProps> = ({ onNavigateHome, onNavigate
                 Mantenimiento mensual
               </h2>
               <p className="text-grafito/85 leading-relaxed text-base">
-                El contrato tiene una duración mínima de 6 meses. El pago se realiza por adelantado, los días 5 de cada mes. Las horas de cambios no usadas no se acumulan al mes siguiente. Si contratas un proyecto, el primer mes del plan de mantenimiento que elijas es gratis.
+                El contrato tiene una duración mínima de 6 meses. El pago se realiza por adelantado, los días 5 de cada mes. Las horas de cambios no usadas no se acumulan al mes siguiente. Si contratas una web, el primer mes del plan de mantenimiento que le corresponde es gratis: Esencial con Web Presencia, Pro con Web Profesional y Crecimiento con Tienda online.
               </p>
             </section>
 

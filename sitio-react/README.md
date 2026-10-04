@@ -84,3 +84,16 @@ Sitio web oficial y plataforma comercial para **ECRISTIA**, servicio freelance d
 ## ✏️ Cómo Editar Datos y Precios
 
 Para cambiar cualquier precio, teléfono de WhatsApp, textos de tipos de web, rubros o preguntas frecuentes, edita únicamente el archivo **`src/siteData.ts`**. Toda la aplicación reflejará los cambios automáticamente.
+
+---
+
+## 🚀 Publicar en Hostinger
+
+El sitio es estático: no necesita Node ni base de datos en el hosting.
+
+1. En tu computadora: `npm install` y luego `npm run build`. Se crea la carpeta `dist/`.
+2. En hPanel (Administrador de archivos o FTP), sube **el contenido** de `dist/` a `public_html/` del dominio. Incluye el archivo oculto `.htaccess`: hace que `/politicas` y las demos abran bien al recargar la página.
+3. Activa el certificado SSL del dominio y, si lo ofrece tu panel, la opción para forzar HTTPS.
+4. Cuando tengas el dominio, añade en `index.html` la dirección canónica y la imagen para compartir (`og:image`), y envía el sitio a Google Search Console.
+
+Para actualizar el sitio, repite los pasos 1 y 2.

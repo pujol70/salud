@@ -42,6 +42,7 @@ export const EstimatorCalculator: React.FC = () => {
 
   const isRescue = selectedProjectId === 'rescate';
   const hasPlan = selectedPlanId !== 'sin_plan';
+  const pairedPlan = planOptions.find(p => p.id === siteData.freeMonthPlanByProject[selectedProjectId]);
   const deposit = Math.round(currentProject.cost * 0.5);
 
   // WhatsApp formatted message per brief:
@@ -236,7 +237,11 @@ export const EstimatorCalculator: React.FC = () => {
                       </span>
                     ) : hasPlan ? (
                       <span>
-                        Pagas <strong className="text-grafito">{formatGs(deposit)} (50%)</strong> al empezar y el resto al entregar. <strong className="text-fiordo">El primer mes del plan {currentPlan.name} es gratis.</strong>
+                        Pagas <strong className="text-grafito">{formatGs(deposit)} (50%)</strong> al empezar y el resto al entregar. <strong className="text-fiordo">
+                          {pairedPlan && pairedPlan.id !== currentPlan.id
+                            ? `El primer mes gratis es del plan ${pairedPlan.name}, que va con ${currentProject.name}.`
+                            : `El primer mes del plan ${currentPlan.name} es gratis.`}
+                        </strong>
                       </span>
                     ) : (
                       <span>

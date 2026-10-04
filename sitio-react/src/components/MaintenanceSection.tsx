@@ -123,6 +123,16 @@ export const MaintenanceSection: React.FC = () => {
           </span>
         </div>
 
+        <p className="mt-4 text-center text-sm text-pizarra">
+          {siteData.packages
+            .map((pkg) => {
+              const plan = siteData.maintenancePlans.find((p) => p.id === siteData.freeMonthPlanByProject[pkg.id]);
+              return plan ? `Con ${pkg.name}, el primer mes del plan ${plan.name} es gratis.` : null;
+            })
+            .filter(Boolean)
+            .join(' ')}
+        </p>
+
       </div>
     </section>
   );
