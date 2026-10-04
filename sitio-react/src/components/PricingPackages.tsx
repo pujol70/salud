@@ -127,7 +127,7 @@ export const PricingPackages: React.FC = () => {
 
           <div className="flex items-center gap-2 text-xs text-pizarra shrink-0 bg-arena px-3.5 py-2 rounded-full border border-linea">
             <span className="w-2 h-2 rounded-full bg-salvia"></span>
-            <span>Con factura electrónica</span>
+            <span>Con contrato y factura electrónica</span>
           </div>
         </div>
 

@@ -50,10 +50,13 @@ export interface RealEstateProperty {
   deliveryDate?: string;
 }
 
+/** Nombre de la marca: es lo único que hay que cambiar aquí al renombrar (más index.html). */
+const BRAND = "ECRISTIA";
+
 export const siteData = {
   // Datos de contacto oficial
   contact: {
-    brand: "ECRISTIA",
+    brand: BRAND,
     brandSubtitle: "Diseño y desarrollo web",
     developerName: "Erasmo",
     whatsappNumber: "595982829875",
@@ -62,7 +65,7 @@ export const siteData = {
     email: "ecristiamz@gmail.com",
     location: "Asunción y Gran Asunción",
     aboutMe: "[COMPLETAR]",
-    footerLegal: "© 2026 ECRISTIA · Asunción y Gran Asunción · Todos los precios están en guaraníes e incluyen IVA",
+    footerLegal: `© 2026 ${BRAND} · Asunción y Gran Asunción · Todos los precios están en guaraníes e incluyen IVA`,
     auditWhatsappMessage: "Hola, quiero la revisión gratuita de mi web."
   },
 
@@ -200,7 +203,7 @@ export const siteData = {
     maintenanceMinTerm: "Contrato mínimo de 6 meses",
     billingDay: "Cobro por adelantado el día 5",
     hoursRule: "Las horas no usadas no se acumulan",
-    firstMonthFreeCondition: "Primer mes gratis si contratas un proyecto nuevo."
+    firstMonthFreeCondition: "Primer mes gratis del plan que elijas, si contratas un proyecto nuevo."
   },
 
   // Programa piloto
@@ -276,7 +279,7 @@ export const siteData = {
     {
       number: "02",
       title: "Propuesta clara",
-      description: "Recibes el alcance, el plazo y el precio exactos, por escrito, antes de pagar nada.",
+      description: "Recibes el alcance, el plazo y el precio exactos, por escrito, antes de pagar nada. Si lo apruebas, te envío un contrato simple.",
       channel: "Por escrito, antes de pagar"
     },
     {
@@ -309,6 +312,11 @@ export const siteData = {
       id: "faq-3",
       question: "¿Qué incluye el hosting y el dominio?",
       answer: "Todos los tipos de web incluyen hosting por 1 año. El dominio .com también, si todavía no tienes uno. Si ya tienes dominio, puedes usarlo, pero el precio es el mismo. Pasado el primer año, el hosting sigue con un plan de mantenimiento."
+    },
+    {
+      id: "faq-contrato",
+      question: "¿Hay contrato?",
+      answer: "Sí, pero es simple. Cuando apruebas el presupuesto te lo envío, y puedes devolverlo firmado o confirmar tu aceptación por WhatsApp."
     },
     {
       id: "faq-4",

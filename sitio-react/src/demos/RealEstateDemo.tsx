@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { ResidentialIllustration, PropertyIllustration } from './Illustrations';
 import { 
   ArrowLeft, 
   Building, 
@@ -88,7 +89,7 @@ export const RealEstateDemo: React.FC<RealEstateDemoProps> = ({ onBack }) => {
           className="inline-flex items-center gap-1.5 font-bold hover:text-[#FFB59A] transition-colors focus:outline-none"
         >
           <ArrowLeft className="w-4 h-4" />
-          <span>Volver a ECRISTIA</span>
+          <span>Volver a {siteData.contact.brand}</span>
         </button>
 
         <span className="order-last w-full text-center sm:order-none sm:w-auto uppercase tracking-wider text-[11px] text-[#DBC1B8]">
@@ -170,15 +171,7 @@ export const RealEstateDemo: React.FC<RealEstateDemoProps> = ({ onBack }) => {
 
           <div className="lg:col-span-6 bg-white p-3 rounded-2xl border border-[#E5DDD0] shadow-xl">
             <div className="relative rounded-xl overflow-hidden aspect-[16/11] bg-[#F2E6E1] flex items-center justify-center">
-              <img 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEdr9uUAJ9TKenx4oJRO8lVKSk88gkJ8B9-gK0Z8UMyU2TjhWTOib9qsg7DcNhH1Gt-XqMw4oGWKvbJbfu9sSkNNizHsn-tpnOlEU3wXuYT2Lt748cZt_JYDpqbxcf6-0Ca6eGrc4yFEc4Ca8dijPBb2oQJjiNmC7vdhHG3uLM-2--BBTWfBtlW4pY3xua0FRFB8H7Fqv_l3nd8-FeVZAbJRlEny6jlDHeQMrpt6vnYoSEtrrX1I7z" 
-                alt="Fachada residencial en Asunción"
-                className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
-                onError={(e) => {
-                  (e.target as HTMLElement).style.display = 'none';
-                }}
-              />
+              <ResidentialIllustration className="w-full h-full" />
               <div className="absolute bottom-3 left-3 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-lg shadow-sm border border-[#E5DDD0]">
                 <span className="font-bold text-xs text-[#201A18] block">Edificio Santa Teresa</span>
                 <span className="text-[11px] text-[#825430]">Eje Corporativo Asunción</span>
@@ -331,15 +324,9 @@ export const RealEstateDemo: React.FC<RealEstateDemoProps> = ({ onBack }) => {
                         </span>
                       </div>
 
-                      {/* Schematic Graphic */}
-                      <div className="my-auto opacity-70 flex justify-center items-center">
-                        <div className="w-32 h-20 border border-[#DBC1B8] rounded flex flex-col justify-between p-1 bg-[#FFF8F6]">
-                          <div className="h-2 w-12 bg-[#B85D38]/40 rounded"></div>
-                          <div className="grid grid-cols-2 gap-1">
-                            <div className="h-6 bg-[#DBC1B8]/40 rounded"></div>
-                            <div className="h-6 bg-[#DBC1B8]/40 rounded"></div>
-                          </div>
-                        </div>
+                      {/* Ilustración simple de la propiedad */}
+                      <div className="my-auto flex justify-center items-center">
+                        <PropertyIllustration type={prop.type} className="w-40 h-24" />
                       </div>
 
                       <div className="text-[10px] text-[#825430] z-10 font-mono">
@@ -522,7 +509,7 @@ export const RealEstateDemo: React.FC<RealEstateDemoProps> = ({ onBack }) => {
             </div>
             <h3 className="font-bold text-lg text-[#201A18]">Es una demo de concepto</h3>
             <p className="text-sm text-[#55433C] leading-relaxed">
-              Esta es una pantalla de demostración de arquitectura de portal inmobiliario para Asunción desarrollada por ECRISTIA. No envía consultas ni reservas reales.
+              Esta es una pantalla de demostración de arquitectura de portal inmobiliario para Asunción desarrollada por {siteData.contact.brand}. No envía consultas ni reservas reales.
             </p>
             <div className="pt-2 flex flex-col gap-2">
               <button
@@ -537,7 +524,7 @@ export const RealEstateDemo: React.FC<RealEstateDemoProps> = ({ onBack }) => {
                 onClick={onBack}
                 className="w-full py-2.5 rounded-lg bg-[#F8EBE6] text-[#201A18] font-semibold text-sm hover:bg-[#F2E6E1] transition-colors"
               >
-                Volver al sitio de ECRISTIA
+                Volver al sitio de {siteData.contact.brand}
               </button>
             </div>
           </div>
@@ -551,7 +538,7 @@ export const RealEstateDemo: React.FC<RealEstateDemoProps> = ({ onBack }) => {
             Inmobiliaria Ejemplo · Asunción, Paraguay
           </p>
           <p className="text-[#88726B]">
-            Demo de concepto diseñada para demostración de arquitectura web en Asunción por ECRISTIA.
+            Demo de concepto diseñada para demostración de arquitectura web en Asunción por {siteData.contact.brand}.
           </p>
         </div>
       </footer>

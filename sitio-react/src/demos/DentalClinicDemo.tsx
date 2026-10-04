@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { ClinicIllustration } from './Illustrations';
 import { 
   ArrowLeft, 
   Clock, 
@@ -48,7 +49,7 @@ export const DentalClinicDemo: React.FC<DentalClinicDemoProps> = ({ onBack }) =>
           className="inline-flex items-center gap-1.5 font-bold hover:text-[#6EF9E2] transition-colors focus:outline-none"
         >
           <ArrowLeft className="w-4 h-4" />
-          <span>Volver a ECRISTIA</span>
+          <span>Volver a {siteData.contact.brand}</span>
         </button>
 
         <span className="order-last w-full text-center sm:order-none sm:w-auto uppercase tracking-wider text-[11px] text-[#A6CCDE]">
@@ -138,16 +139,7 @@ export const DentalClinicDemo: React.FC<DentalClinicDemoProps> = ({ onBack }) =>
 
           <div className="lg:col-span-5 bg-white p-3 rounded-2xl border border-[#E2E8F0] shadow-xl">
             <div className="relative rounded-xl overflow-hidden aspect-[4/3] bg-[#E2E8F0] flex items-center justify-center">
-              <img 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuABeLx24ADrqG9T9mc2SZ9wScfOVDhNVjuzzSk4tprs01svuJm9CDe3M6C-lkyAD_UZaFAIVlJAEDtUz4w26dVL4dv_I6l1F-vFECVtvEgmd7Hp49Ca_Fnx04nyCpoq9uco59srFEh9FaWoA1G6vfXRYnJLvAMNRe8uIzin3q1D5aGlpFEG-6oBB0nMdrmKl2iGWkH8wdCYU1L6pyFJNLCedIGeQpb7i1ITeLAcbLUGDmMM9mfHQEpI" 
-                alt="Consultorio odontológico en Villa Morra" 
-                className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
-                onError={(e) => {
-                  // Fallback container
-                  (e.target as HTMLElement).style.display = 'none';
-                }}
-              />
+              <ClinicIllustration className="w-full h-full" />
               <div className="absolute bottom-3 left-3 bg-white/95 backdrop-blur-md px-3 py-2 rounded-lg shadow-sm border border-[#E2E8F0] flex items-center gap-2">
                 <Shield className="w-4 h-4 text-[#006B5F]" />
                 <span className="text-xs font-semibold text-[#0F3846]">Tecnología 3D & Escaneo Digital</span>
@@ -364,7 +356,7 @@ export const DentalClinicDemo: React.FC<DentalClinicDemoProps> = ({ onBack }) =>
             </div>
             <h3 className="font-bold text-lg text-[#0F3846]">Es una demo de concepto</h3>
             <p className="text-sm text-[#41484B] leading-relaxed">
-              Esta es una pantalla de demostración de arquitectura web para consultorios en Asunción desarrollada por ECRISTIA. No envía mensajes ni turnos reales.
+              Esta es una pantalla de demostración de arquitectura web para consultorios en Asunción desarrollada por {siteData.contact.brand}. No envía mensajes ni turnos reales.
             </p>
             <div className="pt-2 flex flex-col gap-2">
               <button
@@ -379,7 +371,7 @@ export const DentalClinicDemo: React.FC<DentalClinicDemoProps> = ({ onBack }) =>
                 onClick={onBack}
                 className="w-full py-2.5 rounded-lg bg-[#F2F4F6] text-[#0F3846] font-semibold text-sm hover:bg-[#E6E8EA] transition-colors"
               >
-                Volver al sitio de ECRISTIA
+                Volver al sitio de {siteData.contact.brand}
               </button>
             </div>
           </div>
@@ -393,7 +385,7 @@ export const DentalClinicDemo: React.FC<DentalClinicDemoProps> = ({ onBack }) =>
             {dental.name} · Villa Morra · Asunción, Paraguay
           </p>
           <p className="text-[#71787C]">
-            Demo de concepto diseñada para demostración de arquitectura web en Asunción por ECRISTIA.
+            Demo de concepto diseñada para demostración de arquitectura web en Asunción por {siteData.contact.brand}.
           </p>
         </div>
       </footer>

@@ -236,7 +236,7 @@ export const EstimatorCalculator: React.FC = () => {
                       </span>
                     ) : hasPlan ? (
                       <span>
-                        Pagas <strong className="text-grafito">{formatGs(deposit)} (50%)</strong> al empezar y el resto al entregar. <strong className="text-fiordo">El primer mes de mantenimiento es gratis.</strong>
+                        Pagas <strong className="text-grafito">{formatGs(deposit)} (50%)</strong> al empezar y el resto al entregar. <strong className="text-fiordo">El primer mes del plan {currentPlan.name} es gratis.</strong>
                       </span>
                     ) : (
                       <span>

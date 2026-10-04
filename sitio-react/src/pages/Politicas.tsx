@@ -48,13 +48,23 @@ export const Politicas: React.FC<PoliticasProps> = ({ onNavigateHome, onNavigate
               </p>
             </section>
 
+            {/* Contrato */}
+            <section className="space-y-3 border-b border-linea/60 pb-8">
+              <h2 className="font-syne font-bold text-2xl text-fiordo tracking-tight">
+                Contrato
+              </h2>
+              <p className="text-grafito/85 leading-relaxed text-base">
+                Cuando apruebas el presupuesto, te envío un contrato simple. Puedes devolverlo firmado o confirmar tu aceptación por WhatsApp.
+              </p>
+            </section>
+
             {/* 2. Mantenimiento mensual */}
             <section className="space-y-3 border-b border-linea/60 pb-8">
               <h2 className="font-syne font-bold text-2xl text-fiordo tracking-tight">
                 Mantenimiento mensual
               </h2>
               <p className="text-grafito/85 leading-relaxed text-base">
-                El contrato tiene una duración mínima de 6 meses. El pago se realiza por adelantado, los días 5 de cada mes. Las horas de cambios no usadas no se acumulan al mes siguiente. Si contratas un proyecto, el primer mes de mantenimiento es gratis.
+                El contrato tiene una duración mínima de 6 meses. El pago se realiza por adelantado, los días 5 de cada mes. Las horas de cambios no usadas no se acumulan al mes siguiente. Si contratas un proyecto, el primer mes del plan de mantenimiento que elijas es gratis.
               </p>
             </section>
 
