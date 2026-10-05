@@ -20,7 +20,7 @@ Estado: **solo especificación. Nada de esto está aplicado todavía.**
 | Tarifa por hora | Gs 225.000 **con IVA incluido** (neto: Gs 204.545). Ajustable más adelante. |
 | Facturación | En guaraníes, factura electrónica. |
 | Planes de mantenimiento | Esencial (1 h), Pro (2 h), Crecimiento (5 h). Precios actuales **se mantienen**: Gs 250.000, 450.000 y 950.000 al mes. |
-| Hosting y dominio | Incluidos (1 año) solo en los 3 tipos de web. Los planes de mantenimiento **no** los incluyen: el cliente ya debe tener hosting y dominio. |
+| Hosting y dominio | Incluidos (1 año) solo en los 3 tipos de web. Después los paga el cliente: el dominio una vez al año, el hosting una vez al año o cada mes. Los planes de mantenimiento **no incluyen su costo**; pueden incluir su administración. |
 | Primer mes gratis | Si contrata una web, el primer mes del plan que le corresponde: Presencia con Esencial, Profesional con Pro, Tienda con Crecimiento. |
 | Contrato de mantenimiento | 6 meses, con renovación automática por otros 6 meses. Pasados los primeros 6 meses, el cliente puede cancelar cuando quiera con 30 días de preaviso. |
 | Mora | Interés moratorio sobre el saldo vencido y suspensión del servicio al mes sin pago (texto en la sección 3). |
@@ -37,10 +37,16 @@ Estado: **solo especificación. Nada de esto está aplicado todavía.**
   - Cambiar "30 minutos de cambios al mes" por **"1 hora de cambios al mes"**.
   - Quitar "Hosting y certificado de seguridad (SSL)".
   - Cambiar "Actualizaciones de WordPress y plugins" por "Actualizaciones de tu web (WordPress, Shopify o código a medida)".
-- **A2. Requisito de los 3 planes.** Mostrar "Requiere que tu web ya tenga hosting y dominio propios" en la sección Mantenimiento (nota bajo las tarjetas), en el cotizador cuando se elija un plan, y en Políticas.
-- **A3. Informe en Pro.** Cambiar "Informe mensual de visitas y consultas" por "Informe mensual de salud digital: visitas, Google y redes". `[PENDIENTE]` No prometer "consultas" hasta que el usuario decida cómo se miden (por ejemplo, con un evento de clic en el botón de WhatsApp).
+- **A2. Hosting y dominio en los planes de mantenimiento.** Los planes **no incluyen el costo** de hosting ni de dominio. Mostrar en la sección Mantenimiento (nota bajo las tarjetas), en el cotizador cuando se elija un plan, y en Políticas:
+  > El mantenimiento no incluye hosting ni dominio: su costo lo pagas tú. El dominio se paga una vez al año. El hosting se paga una vez al año o, si el plan del proveedor lo permite, cada mes. Tu web debe tener hosting y dominio activos; si quieres, los administro dentro de tu plan de mantenimiento.
+  
+  `[PENDIENTE]` Cómo se hace el pago (directo al proveedor o por medio del usuario). No lo escribas hasta que el usuario lo defina.
+- **A3. Informe en Pro.** Cambiar "Informe mensual de visitas y consultas" por "Informe mensual de salud digital: visitas, Google, redes y toques en el botón de WhatsApp". El informe cuenta cuántas personas tocaron el botón de WhatsApp (no cuántos mensajes llegaron). Para eso, al entregar cada web hay que configurar en Google Analytics un evento de clic en ese botón. `[PENDIENTE]` El usuario debe confirmar esta propuesta; mientras tanto no escribas la palabra "consultas".
 - **A4. Informe en Crecimiento.** Añadir "Informe mensual ampliado: incluye las búsquedas que te traen visitas y, si tienes anuncios, sus resultados". Revisar que no se solape con "Ajustes de SEO local cada mes".
-- **A5. Pregunta frecuente de hosting (`faq-3`).** Quitar la frase "Pasado el primer año, el hosting sigue con un plan de mantenimiento", que contradice la decisión. `[PENDIENTE]` El usuario definirá más adelante qué decir después del primer año (puede afiliarse a un proveedor de hosting con comisión). No escribas nada sobre eso. Repetir el cambio en el bloque de datos para Google de `index.html`.
+- **A5. Pregunta frecuente de hosting (`faq-3`).** Reemplazar la respuesta por:
+  > Todos los tipos de web incluyen hosting por 1 año. El dominio .com también, si todavía no tienes uno. Si ya tienes dominio, puedes usarlo, pero el precio es el mismo. Pasado el primer año, el hosting y el dominio los pagas tú: el dominio se paga una vez al año, y el hosting una vez al año o cada mes, según el plan del proveedor. Si quieres, yo los administro dentro de tu plan de mantenimiento, pero su costo lo pagas tú.
+
+  Repetir el cambio en el bloque de datos para Google de `index.html`, y en Políticas, apartado "Dominio y hosting" (añadir las mismas dos últimas frases). `[PENDIENTE]` La afiliación con un proveedor de hosting (comisión) no se menciona todavía.
 - **A6. Pregunta frecuente de contrato (`faq-contrato`).** Ampliar con: "Los planes de mantenimiento duran 6 meses y se renuevan solos. Después de los primeros 6 meses puedes cancelar cuando quieras avisando con 30 días de anticipación." Repetir en `index.html`.
 - **A7. Franja de condiciones del mantenimiento.**
   - "Contrato mínimo de 6 meses" pasa a "Contrato de 6 meses, con renovación automática".
@@ -48,12 +54,13 @@ Estado: **solo especificación. Nada de esto está aplicado todavía.**
 - **A8. Sección Complementos (nueva, bajo Mantenimiento).**
   - Vigilancia de competencia con 2, 4 o 6 competidores.
   - Newsletter "a pedido", con cotización por WhatsApp.
-  - Precios de referencia en la sección 4. `[PENDIENTE]` El usuario debe confirmar si se publican esos precios o solo "cotiza por WhatsApp".
+  - **Los precios se publican** (decisión del usuario): los de la sección 4, con IVA incluido. Newsletter se marca "A pedido".
   - Cada complemento lleva su botón de WhatsApp con mensaje precargado, como los planes.
-- **A9. Nueva página de pedidos de cambios (`/pedir-cambio`).**
-  - Formulario con nombre, sitio web, qué cambio necesitas, si el sitio está caído (sí o no) y WhatsApp.
+- **A9. Página "Pedir cambios en mi web" (`/pedido-de-cambios`).** No es un cambio de plan. Es el formulario que usa un cliente que **ya tiene mantenimiento** para pedir un cambio en su web: cambiar un texto o un precio, subir una foto, corregir un error. Cada pedido gasta las horas de su plan.
+  - Campos: nombre, sitio web, qué cambio necesitas, si el sitio está caído (sí o no) y WhatsApp.
   - Al enviar, abre WhatsApp con los datos escritos, igual que el formulario de contacto actual. Sin servidor.
   - `[PENDIENTE]` ¿Dónde se enlaza? No va en el pie de página. Propuesta: desde Políticas, en un apartado "Cómo pedir cambios".
+- **A11. Sección "Quién soy" (nueva).** Texto en la sección 3. Ubicación propuesta: después de "Cómo trabajo". Sin foto por ahora (no hay foto del usuario; no uses una imagen genérica). El texto no debe incluir cifras, universidades ni clientes que el usuario no haya dado. `[PENDIENTE]` Si el usuario quiere sumar años de experiencia, estudios o una foto, los aporta él.
 - **A10. Cotizador.** Mostrar el requisito de hosting y dominio al elegir un plan. El resto no cambia.
 
 ### B. Políticas (`src/pages/Politicas.tsx`)
@@ -72,7 +79,18 @@ Reemplazar el apartado "Mantenimiento mensual" y añadir los siguientes (textos 
 > Si un pago se atrasa, se cobra un interés moratorio del 24% anual, calculado por día sobre el saldo vencido y sin capitalizar, dentro de los límites que fija la ley (Ley 489/95, art. 44, modificada por la Ley 2339/03, o la norma que la reemplace). Si pasa un mes sin pago, el servicio se suspende hasta regularizar la deuda.
 
 **Cómo pedir cambios**
-> Puedes pedir cambios con el formulario de esta página o por WhatsApp. Cada pedido queda registrado antes de ejecutarse.
+> Si tienes un plan de mantenimiento, puedes pedir cambios en tu web con el formulario "Pedir cambios en mi web" o por WhatsApp. Cada pedido queda registrado antes de ejecutarse.
+
+**Dominio y hosting** (añadir al apartado existente)
+> Pasado el primer año, el hosting y el dominio los pagas tú. El dominio se paga una vez al año; el hosting, una vez al año o cada mes, según el plan del proveedor. Si quieres, yo los administro dentro de tu plan de mantenimiento, pero su costo lo pagas tú.
+
+**Quién soy** (sección nueva del sitio, no de Políticas)
+> Soy Erasmo Cristia, ingeniero en telecomunicaciones y especialista en sistemas informáticos. Llevo muchos años diseñando y desarrollando sitios web con herramientas avanzadas, y hoy hago webs para clínicas, inmobiliarias, estudios y comercios de Asunción y Gran Asunción.
+>
+> Yo mismo hablo contigo, diseño y programo tu web, y después me encargo de mantenerla. Sabes desde el principio cuánto pagas y cuándo la recibes, y puedes escribirme por WhatsApp cuando necesites algo.
+
+Versión corta (para una tarjeta o para el hero, si hace falta):
+> Ingeniero en telecomunicaciones y especialista en sistemas informáticos, con muchos años diseñando y desarrollando webs.
 
 Notas para quien revise el texto de mora:
 - La ley no fija una tasa única. Pone un tope: el interés moratorio no puede superar el pactado, el punitorio adicional no puede pasar del 30% del moratorio, no se capitalizan intereses, y es usuraria la tasa que excede en 30% el promedio de créditos de consumo que publica el BCP cada mes. El último tope que se encontró (prensa) fue 30,17% anual en guaraníes para octubre.
@@ -94,7 +112,7 @@ Con la tarifa de Gs 225.000 por hora (IVA incluido) y los tiempos de los manuale
 
 La meta es Gs 204.545 por hora sin IVA. Los planes quedan por debajo. Se mantienen por decisión del usuario; conviene medir horas reales a los 60 o 90 días.
 
-**Complementos (precios de referencia, IVA incluido).** Cálculo: horas × Gs 225.000, redondeado a Gs 5.000.
+**Complementos (precios publicados en el sitio, IVA incluido).** Cálculo: horas × Gs 225.000, redondeado a Gs 5.000.
 
 | Complemento | Horas | Referencia |
 |---|---|---|
@@ -109,14 +127,14 @@ El Reporte de Salud Digital suelto (referencia: Gs 250.000, 395.000 y 620.000) n
 
 ## 5. Pendientes que Claude Code debe consultar, no resolver
 
-1. Nombre definitivo de la marca y dominio `.com`. Después, `og:url`, dirección canónica e imagen para compartir.
-2. Texto sobre hosting y dominio después del primer año (y posible afiliación con comisión, que pediría una línea de aclaración en Políticas).
-3. Si los precios de los complementos se publican.
-4. Dónde se enlaza `/pedir-cambio`.
-5. Validación legal de la cláusula de mora y del contrato definitivo.
-6. Cómo se mide "consultas" en el informe.
-7. Cobertura exacta del mantenimiento para Shopify y código a medida (los manuales internos solo cubren WordPress).
-8. Texto de "Quién soy" y el detalle de la foto del hero.
+1. Nombre definitivo de la marca y dominio `.com` (por ahora se mantiene ECRISTIA). Después, `og:url`, dirección canónica e imagen para compartir.
+2. Cómo se paga el hosting y el dominio después del primer año (directo al proveedor o por medio del usuario) y la posible afiliación con comisión, que pediría una línea de aclaración en Políticas.
+3. Dónde se enlaza `/pedido-de-cambios`.
+4. Validación legal de la cláusula de mora y del contrato definitivo.
+5. Confirmar que el informe cuente los toques en el botón de WhatsApp (A3).
+6. Cobertura exacta del mantenimiento para Shopify y código a medida (los manuales internos solo cubren WordPress).
+7. Si el usuario quiere añadir a "Quién soy" años de experiencia, estudios o una foto.
+8. Foto del hero: se deja la actual hasta ver el sitio publicado.
 
 ## 6. Criterios de aceptación
 
@@ -127,3 +145,5 @@ El Reporte de Salud Digital suelto (referencia: Gs 250.000, 395.000 y 620.000) n
 - [ ] Los datos para Google de `index.html` coinciden con las preguntas frecuentes visibles.
 - [ ] Sin desplazamiento horizontal a 320, 390, 768, 1024 y 1280 px.
 - [ ] El pie de página sigue siendo solo "Contacto | Políticas".
+- [ ] "Quién soy" no contiene cifras, estudios ni clientes que el usuario no haya dado.
+- [ ] Los precios de los complementos coinciden con la sección 4.
