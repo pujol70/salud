@@ -20,7 +20,9 @@ Estado: **solo especificación. Nada de esto está aplicado todavía.**
 | Tarifa por hora | Gs 225.000 **con IVA incluido** (neto: Gs 204.545). Ajustable más adelante. |
 | Facturación | En guaraníes, factura electrónica. |
 | Planes de mantenimiento | Esencial (1 h), Pro (2 h), Crecimiento (5 h). Precios actuales **se mantienen**: Gs 250.000, 450.000 y 950.000 al mes. |
-| Hosting y dominio | Incluidos (1 año) solo en los 3 tipos de web. Después los paga el cliente: el dominio una vez al año, el hosting una vez al año o cada mes. Los planes de mantenimiento **no incluyen su costo**; pueden incluir su administración. |
+| Hosting y dominio | Incluidos (1 año) solo en los 3 tipos de web. Después los paga el cliente: el dominio una vez al año, el hosting una vez al año o cada mes. El cliente paga directo al proveedor, o el usuario lo paga y se lo refactura **más IVA**. Los planes de mantenimiento **no incluyen su costo**; pueden incluir su administración. |
+| Informe de Pro y Crecimiento | Cuenta visitas, Google, redes y toques en el botón de WhatsApp (evento de Google Analytics configurado al entregar cada web). **Confirmado.** |
+| Pedidos de cambios | Página `/pedido-de-cambios`, enlazada desde Políticas. **Confirmado.** |
 | Primer mes gratis | Si contrata una web, el primer mes del plan que le corresponde: Presencia con Esencial, Profesional con Pro, Tienda con Crecimiento. |
 | Contrato de mantenimiento | 6 meses, con renovación automática por otros 6 meses. Pasados los primeros 6 meses, el cliente puede cancelar cuando quiera con 30 días de preaviso. |
 | Mora | Interés moratorio sobre el saldo vencido y suspensión del servicio al mes sin pago (texto en la sección 3). |
@@ -38,15 +40,15 @@ Estado: **solo especificación. Nada de esto está aplicado todavía.**
   - Quitar "Hosting y certificado de seguridad (SSL)".
   - Cambiar "Actualizaciones de WordPress y plugins" por "Actualizaciones de tu web (WordPress, Shopify o código a medida)".
 - **A2. Hosting y dominio en los planes de mantenimiento.** Los planes **no incluyen el costo** de hosting ni de dominio. Mostrar en la sección Mantenimiento (nota bajo las tarjetas), en el cotizador cuando se elija un plan, y en Políticas:
-  > El mantenimiento no incluye hosting ni dominio: su costo lo pagas tú. El dominio se paga una vez al año. El hosting se paga una vez al año o, si el plan del proveedor lo permite, cada mes. Tu web debe tener hosting y dominio activos; si quieres, los administro dentro de tu plan de mantenimiento.
-  
-  `[PENDIENTE]` Cómo se hace el pago (directo al proveedor o por medio del usuario). No lo escribas hasta que el usuario lo defina.
+  > El mantenimiento no incluye hosting ni dominio: su costo lo pagas tú. El dominio se paga una vez al año. El hosting se paga una vez al año o, si el plan del proveedor lo permite, cada mes. Puedes pagarlo directamente al proveedor, o yo lo pago y te lo paso: en ese caso te lo facturo por el monto del proveedor más IVA. Tu web debe tener hosting y dominio activos; si quieres, los administro dentro de tu plan de mantenimiento.
+
+  Esta es la **única excepción** a la regla "precios con IVA incluido": el hosting y el dominio que el usuario paga y refactura se facturan **más IVA**. `[PENDIENTE]` No escribas montos: dependen del proveedor y del plan que se elija. Consultar con el contador cómo se refactura (por ejemplo, el comprobante del proveedor).
 - **A3. Informe en Pro.** Cambiar "Informe mensual de visitas y consultas" por "Informe mensual de salud digital: visitas, Google, redes y toques en el botón de WhatsApp". El informe cuenta cuántas personas tocaron el botón de WhatsApp (no cuántos mensajes llegaron). Para eso, al entregar cada web hay que configurar en Google Analytics un evento de clic en ese botón. `[PENDIENTE]` El usuario debe confirmar esta propuesta; mientras tanto no escribas la palabra "consultas".
 - **A4. Informe en Crecimiento.** Añadir "Informe mensual ampliado: incluye las búsquedas que te traen visitas y, si tienes anuncios, sus resultados". Revisar que no se solape con "Ajustes de SEO local cada mes".
 - **A5. Pregunta frecuente de hosting (`faq-3`).** Reemplazar la respuesta por:
-  > Todos los tipos de web incluyen hosting por 1 año. El dominio .com también, si todavía no tienes uno. Si ya tienes dominio, puedes usarlo, pero el precio es el mismo. Pasado el primer año, el hosting y el dominio los pagas tú: el dominio se paga una vez al año, y el hosting una vez al año o cada mes, según el plan del proveedor. Si quieres, yo los administro dentro de tu plan de mantenimiento, pero su costo lo pagas tú.
+  > Todos los tipos de web incluyen hosting por 1 año. El dominio .com también, si todavía no tienes uno. Si ya tienes dominio, puedes usarlo, pero el precio es el mismo. Pasado el primer año, el hosting y el dominio los pagas tú: el dominio se paga una vez al año, y el hosting una vez al año o cada mes, según el plan del proveedor. Puedes pagarlo directamente al proveedor, o yo lo pago y te lo paso, facturado por el monto del proveedor más IVA. Si quieres, yo los administro dentro de tu plan de mantenimiento, pero su costo lo pagas tú.
 
-  Repetir el cambio en el bloque de datos para Google de `index.html`, y en Políticas, apartado "Dominio y hosting" (añadir las mismas dos últimas frases). `[PENDIENTE]` La afiliación con un proveedor de hosting (comisión) no se menciona todavía.
+  Repetir el cambio en el bloque de datos para Google de `index.html`, y en Políticas, apartado "Dominio y hosting" (añadir las mismas frases finales). `[PENDIENTE]` La afiliación con un proveedor de hosting (comisión) no se menciona todavía.
 - **A6. Pregunta frecuente de contrato (`faq-contrato`).** Ampliar con: "Los planes de mantenimiento duran 6 meses y se renuevan solos. Después de los primeros 6 meses puedes cancelar cuando quieras avisando con 30 días de anticipación." Repetir en `index.html`.
 - **A7. Franja de condiciones del mantenimiento.**
   - "Contrato mínimo de 6 meses" pasa a "Contrato de 6 meses, con renovación automática".
@@ -82,7 +84,7 @@ Reemplazar el apartado "Mantenimiento mensual" y añadir los siguientes (textos 
 > Si tienes un plan de mantenimiento, puedes pedir cambios en tu web con el formulario "Pedir cambios en mi web" o por WhatsApp. Cada pedido queda registrado antes de ejecutarse.
 
 **Dominio y hosting** (añadir al apartado existente)
-> Pasado el primer año, el hosting y el dominio los pagas tú. El dominio se paga una vez al año; el hosting, una vez al año o cada mes, según el plan del proveedor. Si quieres, yo los administro dentro de tu plan de mantenimiento, pero su costo lo pagas tú.
+> Pasado el primer año, el hosting y el dominio los pagas tú. El dominio se paga una vez al año; el hosting, una vez al año o cada mes, según el plan del proveedor. Puedes pagarlo directamente al proveedor, o yo lo pago y te lo paso: en ese caso te lo facturo por el monto del proveedor más IVA. Si quieres, también los administro dentro de tu plan de mantenimiento, pero su costo lo pagas tú.
 
 **Quién soy** (sección nueva del sitio, no de Políticas)
 > Soy Erasmo Cristia, ingeniero en telecomunicaciones y especialista en sistemas informáticos. Llevo muchos años diseñando y desarrollando sitios web con herramientas avanzadas, y hoy hago webs para clínicas, inmobiliarias, estudios y comercios de Asunción y Gran Asunción.
@@ -128,13 +130,11 @@ El Reporte de Salud Digital suelto (referencia: Gs 250.000, 395.000 y 620.000) n
 ## 5. Pendientes que Claude Code debe consultar, no resolver
 
 1. Nombre definitivo de la marca y dominio `.com` (por ahora se mantiene ECRISTIA). Después, `og:url`, dirección canónica e imagen para compartir.
-2. Cómo se paga el hosting y el dominio después del primer año (directo al proveedor o por medio del usuario) y la posible afiliación con comisión, que pediría una línea de aclaración en Políticas.
-3. Dónde se enlaza `/pedido-de-cambios`.
-4. Validación legal de la cláusula de mora y del contrato definitivo.
-5. Confirmar que el informe cuente los toques en el botón de WhatsApp (A3).
-6. Cobertura exacta del mantenimiento para Shopify y código a medida (los manuales internos solo cubren WordPress).
-7. Si el usuario quiere añadir a "Quién soy" años de experiencia, estudios o una foto.
-8. Foto del hero: se deja la actual hasta ver el sitio publicado.
+2. Proveedor de hosting y dominio, montos y posible afiliación con comisión (que pediría una línea de aclaración en Políticas). Cómo se refactura el costo con IVA: consultar al contador.
+3. Validación legal de la cláusula de mora y del contrato definitivo.
+4. Cobertura exacta del mantenimiento para Shopify y código a medida (los manuales internos solo cubren WordPress).
+5. Si el usuario quiere añadir a "Quién soy" años de experiencia, estudios o una foto.
+6. Foto del hero: se deja la actual hasta ver el sitio publicado.
 
 ## 6. Criterios de aceptación
 
@@ -147,3 +147,4 @@ El Reporte de Salud Digital suelto (referencia: Gs 250.000, 395.000 y 620.000) n
 - [ ] El pie de página sigue siendo solo "Contacto | Políticas".
 - [ ] "Quién soy" no contiene cifras, estudios ni clientes que el usuario no haya dado.
 - [ ] Los precios de los complementos coinciden con la sección 4.
+- [ ] El texto de hosting y dominio dice "más IVA" solo en el caso en que el usuario lo paga y lo refactura; el resto de los precios sigue con IVA incluido.
