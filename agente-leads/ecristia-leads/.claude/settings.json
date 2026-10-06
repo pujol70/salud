@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch",
+      "Read",
+      "Write",
+      "Glob",
+      "Grep",
+      "Bash(powershell.exe -NoProfile -ExecutionPolicy Bypass -File tools/buscar-places.ps1:*)"
+    ]
+  }
+}
