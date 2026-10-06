@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ECRISTIA Leads</title>
+<style>
+  :root {
+    --bruma: #F6F4EF; --arena: #ECE8DF; --nieve: #FDFCFA; --linea: #DCD6CA;
+    --grafito: #1F2A33; --pizarra: #55636D; --fiordo: #2E4A5C; --fiordo-900: #1F3441;
+    --salvia: #7F9784; --salvia-100: #DDE5DD; --arcilla: #B5593C; --arcilla-700: #9C4A30;
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  body {
+    margin: 0; background: var(--bruma); color: var(--grafito);
+    font: 15px/1.5 "Inter", "Segoe UI", system-ui, sans-serif;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 48px; }
+  h1 { font-size: 26px; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .sub { color: var(--pizarra); margin: 0 0 24px; }
+  .tarjeta { background: var(--nieve); border: 1px solid var(--linea); border-radius: 14px; padding: 20px; margin-bottom: 20px; }
+  .campos { display: grid; grid-template-columns: 2fr 2fr 1fr; gap: 14px; }
+  @media (max-width: 620px) { .campos { grid-template-columns: 1fr; } }
+  label { display: block; font-weight: 600; font-size: 13px; margin-bottom: 6px; }
+  input[type=text], input[type=number] {
+    width: 100%; padding: 10px 12px; font: inherit; color: inherit;
+    background: #fff; border: 1px solid var(--linea); border-radius: 10px;
+  }
+  input:focus { outline: 2px solid var(--fiordo); outline-offset: 1px; }
+  .check { display: flex; gap: 10px; align-items: flex-start; margin: 18px 0 4px; }
+  .check input { width: 18px; height: 18px; margin-top: 2px; accent-color: var(--fiordo); }
+  .check label { font-weight: 500; font-size: 14px; margin: 0; }
+  .ayuda { color: var(--pizarra); font-size: 13px; margin: 2px 0 0 28px; }
+  .aviso { color: var(--arcilla-700); font-size: 13px; margin: 6px 0 0 28px; }
+  .acciones { display: flex; gap: 10px; margin-top: 18px; flex-wrap: wrap; }
+  button {
+    font: inherit; font-weight: 600; border-radius: 10px; padding: 10px 20px; cursor: pointer;
+    border: 1px solid var(--fiordo); background: var(--fiordo); color: var(--nieve);
+  }
+  button:hover { background: var(--fiordo-900); }
+  button.sec { background: transparent; color: var(--fiordo); }
+  button.sec:hover { background: var(--arena); }
+  button:disabled { opacity: .5; cursor: default; }
+  .estado { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .pill { font-size: 13px; font-weight: 600; padding: 3px 10px; border-radius: 999px; background: var(--arena); }
+  .pill.buscando { background: var(--salvia-100); }
+  .pill.error { background: #F3DED6; color: var(--arcilla-700); }
+  .pill.listo { background: var(--salvia-100); color: var(--fiordo-900); }
+  .msg { margin: 10px 0 0; }
+  .msg.error { color: var(--arcilla-700); }
+  pre {
+    background: var(--grafito); color: #E8E4DA; border-radius: 10px; padding: 12px;
+    font: 12px/1.45 Consolas, ui-monospace, monospace; max-height: 260px; overflow: auto;
+    white-space: pre-wrap; word-break: break-word; margin: 12px 0 0;
+  }
+  h2 { font-size: 17px; margin: 0; }
+  ul { list-style: none; padding: 0; margin: 12px 0 0; }
+  li { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 9px 0; border-top: 1px solid var(--linea); }
+  li span { word-break: break-all; }
+  li small { color: var(--pizarra); display: block; }
+  li button { padding: 6px 14px; font-size: 13px; }
+  .vacio { color: var(--pizarra); margin: 12px 0 0; }
+  .nota { color: var(--pizarra); font-size: 13px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>ECRISTIA Leads</h1>
+  <p class="sub">Busca negocios que podrían necesitar una web y guarda la lista en Excel, en la carpeta <b>leads</b>.</p>
+
+  <form class="tarjeta" id="form" autocomplete="off">
+    <div class="campos">
+      <div>
+        <label for="rubro">Rubro</label>
+        <input type="text" id="rubro" list="rubros" maxlength="80" required placeholder="Clínicas odontológicas">
+        <datalist id="rubros">
+          <option value="Clínicas y consultorios">
+          <option value="Clínicas odontológicas">
+          <option value="Inmobiliarias">
+          <option value="Estudios jurídicos">
+          <option value="Estudios contables">
+          <option value="Comercios con catálogo">
+        </datalist>
+      </div>
+      <div>
+        <label for="ciudad">Ciudad o zona</label>
+        <input type="text" id="ciudad" list="ciudades" maxlength="80" required placeholder="Asunción">
+        <datalist id="ciudades">
+          <option value="Asunción">
+          <option value="Asunción y Gran Asunción">
+          <option value="San Lorenzo">
+          <option value="Luque">
+          <option value="Lambaré">
+          <option value="Fernando de la Mora">
+          <option value="Mariano Roque Alonso">
+        </datalist>
+      </div>
+      <div>
+        <label for="cantidad">Cantidad</label>
+        <input type="number" id="cantidad" min="1" max="30" step="1" value="10" required>
+      </div>
+    </div>
+
+    <div class="check">
+      <input type="checkbox" id="places">
+      <label for="places">Usar Google Places (API de Google Cloud)</label>
+    </div>
+    <p class="ayuda">Desmarcado: busca solo con el buscador web, sin costo de Google. Marcado: usa tu clave de Google Cloud; cada consulta tiene costo según tu cuenta.</p>
+    <p class="aviso" id="avisoClave" hidden>No se encontró la variable GOOGLE_PLACES_API_KEY. Configúrala (ver LEEME.md) y vuelve a abrir la app, o deja la casilla desmarcada.</p>
+
+    <div class="acciones">
+      <button type="submit" id="btnBuscar">Buscar</button>
+      <button type="button" class="sec" id="btnCancelar" hidden>Cancelar</button>
+    </div>
+    <p class="nota">Cantidad: leads A o B que quieres en el Excel (de 1 a 30). Una búsqueda puede tardar varios minutos.</p>
+  </form>
+
+  <section class="tarjeta" id="panelEstado" hidden>
+    <div class="estado">
+      <h2>Búsqueda</h2>
+      <span class="pill" id="pill"></span>
+    </div>
+    <p class="msg" id="msg"></p>
+    <div class="acciones" id="accionesListo" hidden>
+      <button type="button" id="btnAbrirUltimo">Abrir Excel</button>
+    </div>
+    <pre id="log"></pre>
+  </section>
+
+  <section class="tarjeta">
+    <div class="estado">
+      <h2>Archivos generados</h2>
+      <button type="button" class="sec" id="btnCarpeta">Abrir carpeta</button>
+    </div>
+    <ul id="lista"></ul>
+    <p class="vacio" id="vacio" hidden>Todavía no hay archivos.</p>
+  </section>
+</main>
+
+<script>
+  const $ = (id) => document.getElementById(id);
+  let sondeo = null;
+  let placesConfigurado = true;
+
+  function guardarCampos() {
+    try {
+      localStorage.setItem('ecristia-leads', JSON.stringify({ rubro: $('rubro').value, ciudad: $('ciudad').value, cantidad: $('cantidad').value }));
+    } catch {}
+  }
+  function cargarCampos() {
+    try {
+      const d = JSON.parse(localStorage.getItem('ecristia-leads') || '{}');
+      if (d.rubro) $('rubro').value = d.rubro;
+      if (d.ciudad) $('ciudad').value = d.ciudad;
+      if (d.cantidad) $('cantidad').value = d.cantidad;
+    } catch {}
+  }
+
+  async function api(ruta, datos) {
+    const op = datos === undefined ? {} : { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(datos) };
+    const r = await fetch(ruta, op);
+    const j = await r.json().catch(() => ({}));
+    if (!r.ok) throw new Error(j.error || 'Error de la app.');
+    return j;
+  }
+
+  function minutos(ms) {
+    const s = Math.max(0, Math.round(ms / 1000));
+    return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
+  }
+
+  function pintarEstado(t) {
+    if (t.estado === 'libre') { $('panelEstado').hidden = true; return; }
+    $('panelEstado').hidden = false;
+    const buscando = t.estado === 'buscando';
+    $('btnBuscar').disabled = buscando;
+    $('btnCancelar').hidden = !buscando;
+    const pill = $('pill');
+    pill.className = 'pill ' + t.estado;
+    const dur = minutos((t.fin || t.ahora) - t.inicio);
+    pill.textContent = buscando ? `Buscando… ${dur}` : t.estado === 'listo' ? `Terminada en ${dur}` : 'Error';
+    const b = t.busqueda;
+    const msg = $('msg');
+    msg.className = 'msg' + (t.estado === 'error' ? ' error' : '');
+    msg.textContent = buscando
+      ? `${b.rubro} · ${b.ciudad} · ${b.cantidad} leads · Google Places: ${b.places ? 'sí' : 'no'}`
+      : t.mensaje;
+    $('accionesListo').hidden = !(t.estado === 'listo' && t.archivo);
+    $('btnAbrirUltimo').dataset.archivo = t.archivo || '';
+    const log = $('log');
+    const alFinal = log.scrollTop + log.clientHeight >= log.scrollHeight - 20;
+    log.textContent = t.log || '';
+    if (alFinal) log.scrollTop = log.scrollHeight;
+  }
+
+  async function actualizarEstado() {
+    try {
+      const t = await api('/api/estado');
+      pintarEstado(t);
+      if (t.estado !== 'buscando' && sondeo) {
+        clearInterval(sondeo); sondeo = null;
+        cargarArchivos();
+      }
+      if (t.estado === 'buscando' && !sondeo) sondeo = setInterval(actualizarEstado, 2000);
+    } catch {
+      $('msg').textContent = 'No hay conexión con la app. Revisa que la ventana negra siga abierta.';
+    }
+  }
+
+  async function cargarArchivos() {
+    try {
+      const { archivos } = await api('/api/archivos');
+      const ul = $('lista');
+      ul.innerHTML = '';
+      $('vacio').hidden = archivos.length > 0;
+      for (const a of archivos) {
+        const li = document.createElement('li');
+        const span = document.createElement('span');
+        span.textContent = a.nombre;
+        const small = document.createElement('small');
+        small.textContent = new Date(a.fecha).toLocaleString('es-PY');
+        span.appendChild(small);
+        const btn = document.createElement('button');
+        btn.type = 'button'; btn.className = 'sec'; btn.textContent = 'Abrir';
+        btn.onclick = () => api('/api/abrir', { archivo: a.nombre }).catch((e) => alert(e.message));
+        li.append(span, btn);
+        ul.appendChild(li);
+      }
+    } catch {}
+  }
+
+  $('places').addEventListener('change', () => {
+    $('avisoClave').hidden = !($('places').checked && !placesConfigurado);
+  });
+
+  $('form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    guardarCampos();
+    try {
+      await api('/api/buscar', {
+        rubro: $('rubro').value,
+        ciudad: $('ciudad').value,
+        cantidad: Number($('cantidad').value),
+        places: $('places').checked,
+      });
+      actualizarEstado();
+    } catch (err) {
+      $('panelEstado').hidden = false;
+      $('pill').className = 'pill error'; $('pill').textContent = 'Error';
+      $('msg').className = 'msg error'; $('msg').textContent = err.message;
+      $('log').textContent = '';
+      $('accionesListo').hidden = true;
+    }
+  });
+
+  $('btnCancelar').onclick = () => {
+    if (confirm('¿Cancelar la búsqueda en curso?')) api('/api/cancelar', {}).catch((e) => alert(e.message));
+  };
+  $('btnAbrirUltimo').onclick = () => {
+    const a = $('btnAbrirUltimo').dataset.archivo;
+    if (a) api('/api/abrir', { archivo: a }).catch((e) => alert(e.message));
+  };
+  $('btnCarpeta').onclick = () => api('/api/abrir-carpeta', {}).catch((e) => alert(e.message));
+
+  cargarCampos();
+  api('/api/config').then((c) => { placesConfigurado = c.placesConfigurado; }).catch(() => {});
+  actualizarEstado();
+  cargarArchivos();
+</script>
+</body>
+</html>

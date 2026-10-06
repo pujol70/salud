@@ -1,9 +1,8 @@
 @echo off
-rem Busqueda semanal de leads: 15 clinicas, 10 inmobiliarias, 5 otros.
-rem La cantidad es de leads A o B; el agente revisa hasta 3 veces esa cantidad de candidatos.
-chcp 65001 >nul
+rem Busqueda semanal de leads: 15 clinicas, 10 inmobiliarias, 5 otros. Sin Google Places.
+rem Para usar Google Places en una linea, agrega --places al final de la linea, antes de la redireccion.
+rem Cada busqueda genera un Excel en la carpeta leads. El detalle queda en leads\registro.log.
 cd /d "%~dp0"
-echo ==== %date% %time% ==== >> leads\registro.log
-call claude -p "Usa el agente buscador-leads para: clinicas y consultorios, Asuncion y Gran Asuncion, 15" >> leads\registro.log 2>&1
-call claude -p "Usa el agente buscador-leads para: inmobiliarias, Asuncion y Gran Asuncion, 10" >> leads\registro.log 2>&1
-call claude -p "Usa el agente buscador-leads para: estudios juridicos y contables o comercios con catalogo, Asuncion, 5" >> leads\registro.log 2>&1
+node app\buscar.js --rubro "Clinicas y consultorios" --ciudad "Asuncion y Gran Asuncion" --cantidad 15 2>> leads\registro.log
+node app\buscar.js --rubro "Inmobiliarias" --ciudad "Asuncion y Gran Asuncion" --cantidad 10 2>> leads\registro.log
+node app\buscar.js --rubro "Estudios juridicos y contables o comercios con catalogo" --ciudad "Asuncion" --cantidad 5 2>> leads\registro.log

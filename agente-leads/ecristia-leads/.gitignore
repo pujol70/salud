@@ -1,0 +1,6 @@
+node_modules/
+leads/tmp/
+leads/*.xlsx
+leads/historial.csv
+leads/registro.log
+leads/places-ultima-busqueda.json

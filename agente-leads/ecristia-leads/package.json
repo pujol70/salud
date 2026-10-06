@@ -1,0 +1,13 @@
+{
+  "name": "ecristia-leads",
+  "version": "1.0.0",
+  "private": true,
+  "description": "App local para buscar leads con Claude Code y guardarlos en Excel",
+  "scripts": {
+    "app": "node app/servidor.js --abrir",
+    "buscar": "node app/buscar.js"
+  },
+  "dependencies": {
+    "exceljs": "4.4.0"
+  }
+}
