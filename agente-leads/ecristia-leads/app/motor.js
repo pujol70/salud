@@ -14,7 +14,8 @@ const NO_CONTACTAR = path.join(LEADS, 'no-contactar.csv');
 const REGISTRO = path.join(LEADS, 'registro.log');
 
 // Comando de Claude Code. Se puede reemplazar con la variable ECRISTIA_CLAUDE_CMD (solo para pruebas).
-const CLAUDE_CMD = process.env.ECRISTIA_CLAUDE_CMD || 'claude -p';
+// --agent ejecuta la sesión directamente como el agente; --strict-mcp-config deja fuera los conectores.
+const CLAUDE_CMD = process.env.ECRISTIA_CLAUDE_CMD || 'claude -p --agent buscador-leads --strict-mcp-config';
 const LIMITE_MS = 30 * 60 * 1000;
 
 const ESTADOS = ['nuevo', 'contactado', 'respondió', 'reunión', 'propuesta', 'ganado', 'perdido'];
@@ -221,7 +222,7 @@ function enlace(url, esInstagram = false) {
   return { text: u, hyperlink: href };
 }
 
-async function escribirExcel(archivo, filas, busqueda, resumen) {
+async function escribirExcel(archivo, filas, revisadosC, busqueda, resumen) {
   const libro = new ExcelJS.Workbook();
   libro.creator = 'ECRISTIA';
   libro.created = new Date();
@@ -255,6 +256,24 @@ async function escribirExcel(archivo, filas, busqueda, resumen) {
 
   hoja.autoFilter = { from: { row: 1, column: 1 }, to: { row: 1, column: COLUMNAS.length } };
 
+  const hojaC = libro.addWorksheet('Revisados C', { views: [{ state: 'frozen', ySplit: 1 }] });
+  hojaC.columns = [
+    { header: 'Puntaje', key: 'puntaje', width: 9 },
+    { header: 'Negocio', key: 'negocio', width: 30 },
+    { header: 'Web', key: 'web', width: 30 },
+    { header: 'Teléfono', key: 'telefono_publico', width: 16 },
+    { header: 'Instagram', key: 'instagram', width: 26 },
+    { header: 'Por qué no califica', key: 'motivo', width: 45 },
+    { header: 'Señales', key: 'senales', width: 45 },
+    { header: 'Notas y fuentes', key: 'notas', width: 50 },
+  ];
+  hojaC.getRow(1).font = { bold: true, color: { argb: COLOR.nieve } };
+  hojaC.getRow(1).fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: COLOR.fiordo } };
+  for (const f of revisadosC) {
+    const fila = hojaC.addRow({ ...f, web: enlace(f.web), instagram: enlace(f.instagram, true) });
+    fila.alignment = { vertical: 'top', wrapText: true };
+  }
+
   const info = libro.addWorksheet('Búsqueda');
   info.columns = [
     { header: 'Dato', key: 'dato', width: 26 },
@@ -270,7 +289,7 @@ async function escribirExcel(archivo, filas, busqueda, resumen) {
     { dato: 'Google Places', valor: busqueda.places ? 'Sí' : 'No' },
     { dato: 'Leads guardados', valor: filas.length },
     { dato: 'Descartados por repetidos', valor: resumen.repetidos },
-    { dato: 'Descartados por categoría C o sin categoría', valor: resumen.descartados },
+    { dato: 'Revisados de categoría C (hoja "Revisados C")', valor: resumen.descartados },
     { dato: 'Estados posibles', valor: ESTADOS.join(', ') },
   ]);
 
@@ -292,7 +311,7 @@ function agregarAlHistorial(filas, nombreArchivo) {
 
 function armarPrompt(b, salidaRel) {
   return [
-    'Usa el agente buscador-leads con estos datos:',
+    'Datos de la búsqueda:',
     `- Rubro: ${b.rubro}`,
     `- Ciudad o zona: ${b.ciudad}`,
     `- Cantidad de leads A o B: ${b.cantidad}`,
@@ -372,6 +391,13 @@ function ejecutarClaude(prompt, alLog, control) {
           )
         );
       }
+      if (/unknown option|error: option/i.test(salida)) {
+        return reject(
+          new Error(
+            'Tu versión de Claude Code no reconoce una opción que usa la app. Abre una terminal, ejecuta claude update y vuelve a buscar.'
+          )
+        );
+      }
       if (/Failed to authenticate|OAuth|not logged in|Invalid API key|\/login/i.test(salida)) {
         return reject(
           new Error(
@@ -420,35 +446,33 @@ async function buscar(datos, alLog = () => {}, control = {}) {
   const hoy = fechaHoy();
   const conocidas = clavesConocidas();
   const filas = [];
+  const revisadosC = [];
   let repetidos = 0;
-  let descartados = 0;
 
   for (const r of crudo) {
-    if (!r || typeof r !== 'object') {
-      descartados++;
-      continue;
-    }
+    if (!r || typeof r !== 'object') continue;
     const f = normalizarFila(r, hoy);
-    if (f.categoria !== 'A' && f.categoria !== 'B') {
-      descartados++;
-      continue;
-    }
+    if (!f.negocio) continue;
     const claves = clavesDe(f);
-    if (!f.negocio || claves.some((k) => conocidas.has(k))) {
+    if (claves.some((k) => conocidas.has(k))) {
       repetidos++;
       continue;
     }
     claves.forEach((k) => conocidas.add(k));
-    filas.push(f);
+    if (f.categoria === 'A' || f.categoria === 'B') filas.push(f);
+    else revisadosC.push(f);
   }
 
-  filas.sort((x, y) => (Number(y.puntaje) || 0) - (Number(x.puntaje) || 0));
+  const porPuntaje = (x, y) => (Number(y.puntaje) || 0) - (Number(x.puntaje) || 0);
+  filas.sort(porPuntaje);
+  revisadosC.sort(porPuntaje);
+  const descartados = revisadosC.length;
 
   fs.rmSync(salidaAbs, { force: true });
 
-  if (filas.length === 0) {
-    const resumen = `No hay leads nuevos A o B; no se creó el Excel.` +
-      (repetidos || descartados ? ` Descartados: ${repetidos} repetidos, ${descartados} de categoría C o sin categoría.` : '');
+  if (filas.length === 0 && revisadosC.length === 0) {
+    const resumen = 'El agente no devolvió ningún negocio nuevo; no se creó el Excel. Revisa el resumen de arriba.' +
+      (repetidos ? ` Repetidos descartados: ${repetidos}.` : '');
     registrar(resumen);
     alLog('\n' + resumen + '\n');
     return { archivo: '', filas: 0, repetidos, descartados, resumen };
@@ -460,13 +484,13 @@ async function buscar(datos, alLog = () => {}, control = {}) {
     nombre = `${marca}_${slug(b.rubro)}_${slug(b.ciudad)}-${n++}.xlsx`;
   }
 
-  await escribirExcel(path.join(LEADS, nombre), filas, b, { repetidos, descartados });
+  await escribirExcel(path.join(LEADS, nombre), filas, revisadosC, b, { repetidos, descartados });
   agregarAlHistorial(filas, nombre);
 
-  const descarte = [repetidos && `${repetidos} repetidos`, descartados && `${descartados} de categoría C o sin categoría`]
-    .filter(Boolean)
-    .join(', ');
-  const resumen = `Listo: ${filas.length} leads guardados en leads\\${nombre}.` + (descarte ? ` Descartados: ${descarte}.` : '');
+  const resumen =
+    `Listo: ${filas.length} leads A o B guardados en leads\\${nombre}.` +
+    (descartados ? ` Revisados de categoría C: ${descartados} (hoja "Revisados C").` : '') +
+    (repetidos ? ` Repetidos descartados: ${repetidos}.` : '');
   registrar(resumen);
   alLog('\n' + resumen + '\n');
 

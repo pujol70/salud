@@ -12,13 +12,14 @@ App local para Windows. Escribes el rubro, la ciudad y la cantidad, pulsas **Bus
 | `app/` | La app: servidor local, pantalla y generador del Excel |
 | `.claude/agents/buscador-leads.md` | El agente: reglas, puntaje y formato |
 | `.claude/settings.json` | Permisos para que Claude Code trabaje sin pedir confirmación |
+| `tools/revisar-web.js` | Revisa la web de cada negocio: si carga, https, versión para celular, WhatsApp, año del copyright y contactos publicados |
 | `tools/buscar-places.ps1` | Consulta a Google Places API (New), solo si marcas la casilla |
 | `leads/` | Excel generados, `historial.csv` y `no-contactar.csv` |
 | `ejecutar-semanal.cmd` | Búsqueda semanal automática: 15 clínicas, 10 inmobiliarias, 5 otros |
 
 ## 1. Requisitos (una sola vez)
 
-1. **Claude Code** instalado y con sesión iniciada. Para comprobarlo, abre una terminal y escribe `claude --version`.
+1. **Claude Code** instalado, actualizado y con sesión iniciada. Para comprobarlo, abre una terminal y escribe `claude --version`. Para actualizarlo: `claude update`.
 2. **Node.js LTS**. Descárgalo de https://nodejs.org, instálalo con las opciones por defecto y comprueba con `node -v` en una terminal nueva.
 3. Copia la carpeta `ecristia-leads` donde quieras, por ejemplo `C:\Proyectos\ecristia-leads`.
 4. **Marca la carpeta como confiable** para Claude Code. Abre una terminal dentro de la carpeta (en el Explorador: clic derecho en un espacio vacío > «Abrir en Terminal»), escribe `claude` y responde «Yes, proceed» a la pregunta de confianza. Sal con `/exit`. Sin este paso, Claude Code ignora los permisos del proyecto y la búsqueda no funciona. Si mueves la carpeta a otro lugar, repítelo.
@@ -60,9 +61,33 @@ Solo hace falta si vas a marcar la casilla.
 
 - Hoja **Leads**: un negocio por fila, ordenados por puntaje. Columnas: estado, categoría, puntaje, negocio, rubro, ciudad, dirección, teléfono, correo, web, Instagram, fuente del contacto, reseñas y calificación de Google (solo con Places), servicio sugerido, motivo, señales, borrador de mensaje, notas con las fuentes, fecha y place_id.
 - La columna **Estado** empieza en "nuevo" y tiene una lista para elegir: nuevo, contactado, respondió, reunión, propuesta, ganado, perdido.
-- Hoja **Búsqueda**: los datos que usaste y cuántos negocios se descartaron.
-- Solo se guardan las categorías A (70 puntos o más) y B (50 a 69).
-- Si no aparece ningún negocio nuevo, no se crea el Excel y la pantalla lo indica.
+- Hoja **Revisados C**: los negocios que el agente revisó pero no llegaron a 50 puntos, con el motivo y las fuentes. Sirven para ver qué buscó y por qué los descartó.
+- Hoja **Búsqueda**: los datos que usaste y los totales.
+- En la hoja Leads van las categorías A (70 puntos o más) y B (50 a 69). Solo los A y B se anotan en el historial.
+- Si el agente no devuelve ningún negocio, no se crea el Excel y la pantalla muestra su resumen.
+
+### Puntaje
+
+| Señal | Puntos |
+|---|---|
+| Sin web propia (verificado con 2 búsquedas) | +40 |
+| Web caída o con error | +40 |
+| Web sin versión para celular | +25 |
+| Web sin https | +15 |
+| Web sin enlace a WhatsApp | +10 |
+| Copyright de 2022 o anterior | +10 |
+| Clínica, consultorio o inmobiliaria | +10 |
+| Varias sedes | +10 |
+| Varios profesionales o agentes | +10 |
+| Reseñas en Google (solo con Places): 100 o más / 30 a 99 | +10 / +5 |
+| Teléfono o WhatsApp comercial publicado | +15 |
+| Correo comercial publicado | +5 |
+
+Necesidad suma como máximo 50, capacidad 30 y contacto 20. Ejemplo: una clínica sin web propia y con teléfono publicado suma 65 (B).
+
+### Con o sin Google Places
+
+Sin Google Places, el agente usa el buscador web y directorios. Encuentra menos negocios por consulta que Google Maps, por eso hace muchas consultas por especialidad y por barrio. Con Google Places recibe listas de negocios activos con teléfono, web y reseñas, que es lo más parecido a lo que ves en Google Maps.
 
 ## 5. Repetidos y "no contactar"
 
