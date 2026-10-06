@@ -338,10 +338,19 @@ function ejecutarClaude(prompt, alLog, control) {
       };
     }
 
+    let salida = '';
+    let problema = '';
     const escribir = (buf) => {
       const t = buf.toString('utf8');
       registrar(t);
       alLog(t);
+      salida = (salida + t).slice(-5000);
+      // Sin confianza en la carpeta, Claude Code ignora los permisos y el agente no puede trabajar: se corta ya.
+      if (!problema && /has not been trusted/i.test(salida)) {
+        problema = 'confianza';
+        cancelado = 'problema';
+        detenerProceso(hijo);
+      }
     };
     hijo.stdout.on('data', escribir);
     hijo.stderr.on('data', escribir);
@@ -355,6 +364,22 @@ function ejecutarClaude(prompt, alLog, control) {
       clearTimeout(reloj);
       if (cancelado === 'usuario') return reject(new Error('Búsqueda cancelada.'));
       if (cancelado === 'tiempo') return reject(new Error('La búsqueda superó los 30 minutos y se detuvo.'));
+      if (problema === 'confianza') {
+        return reject(
+          new Error(
+            'Claude Code no confía todavía en esta carpeta y no usa sus permisos. Abre una terminal en la carpeta del proyecto, ' +
+              'escribe claude, acepta la pregunta de confianza ("Yes, proceed") y sal con /exit. Después vuelve a buscar.'
+          )
+        );
+      }
+      if (/Failed to authenticate|OAuth|not logged in|Invalid API key|\/login/i.test(salida)) {
+        return reject(
+          new Error(
+            'Claude Code no tiene la sesión iniciada o la sesión venció. Abre una terminal, escribe claude, ' +
+              'ejecuta /login, inicia sesión y sal con /exit. Después vuelve a buscar.'
+          )
+        );
+      }
       if (codigo !== 0) {
         return reject(
           new Error(

@@ -21,6 +21,7 @@ App local para Windows. Escribes el rubro, la ciudad y la cantidad, pulsas **Bus
 1. **Claude Code** instalado y con sesión iniciada. Para comprobarlo, abre una terminal y escribe `claude --version`.
 2. **Node.js LTS**. Descárgalo de https://nodejs.org, instálalo con las opciones por defecto y comprueba con `node -v` en una terminal nueva.
 3. Copia la carpeta `ecristia-leads` donde quieras, por ejemplo `C:\Proyectos\ecristia-leads`.
+4. **Marca la carpeta como confiable** para Claude Code. Abre una terminal dentro de la carpeta (en el Explorador: clic derecho en un espacio vacío > «Abrir en Terminal»), escribe `claude` y responde «Yes, proceed» a la pregunta de confianza. Sal con `/exit`. Sin este paso, Claude Code ignora los permisos del proyecto y la búsqueda no funciona. Si mueves la carpeta a otro lugar, repítelo.
 
 ## 2. Usar la app
 
@@ -101,6 +102,8 @@ El agente usa el modelo Sonnet. Cada búsqueda consume uso de tu plan de Claude.
 |---|---|
 | No se encontró Node.js | Instala Node.js LTS y vuelve a abrir `iniciar.cmd` |
 | No se encontró Claude Code | Instala Claude Code y comprueba `claude --version` en una terminal |
+| Claude Code no tiene la sesión iniciada o la sesión venció | En una terminal: `claude`, luego `/login`, inicia sesión y sal con `/exit` |
+| Claude Code no confía todavía en esta carpeta | Haz el paso 4 de la sección 1 |
 | Claude Code terminó con error | Abre una terminal, ejecuta `claude` y revisa que tengas sesión iniciada. Mira `leads\registro.log` |
 | Claude Code terminó sin crear el archivo de resultados | Mira `leads\registro.log`; suele ser un permiso que faltó o una búsqueda interrumpida |
 | Falta la variable GOOGLE_PLACES_API_KEY | Haz el punto 3 o desmarca la casilla |
