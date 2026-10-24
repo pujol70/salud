@@ -1,0 +1,22 @@
+{
+  "name": "agency-hero-orbit",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "remotion studio --no-open --port=3001",
+    "typecheck": "tsc --noEmit",
+    "render": "remotion render src/index.ts HeroOrbitLoop ../videos/hero-orbita-pseudo3d.mp4 --codec=h264 --pixel-format=yuv420p --crf=18 --concurrency=2 --browser-executable=/usr/bin/chromium",
+    "check:orbit": "node scripts/check-loop.cjs"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.538",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.538"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "typescript": "5.9.3"
+  }
+}
