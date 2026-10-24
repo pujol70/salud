@@ -1,0 +1,720 @@
+
+You are an elite cinematic art director, photorealistic 3D motion designer, senior visual effects supervisor, and expert Remotion developer.
+
+PROJECT:
+BISEL DIGITAL — BEYOND THE SCREEN
+
+MISSION:
+Create and RENDER an extraordinary, photorealistic, futuristic cinematic video using REMOTION in CODEX.
+
+I will attach an original image featuring a computer and a smartphone displaying a responsive website.
+
+Transform this image into a breathtaking visual experience where EIGHT spectacular, fully designed website experiences emerge from the computer screen, move toward the RIGHT, and travel in elegant three-dimensional orbital paths around the computer.
+
+The result must feel like a premium technology brand film, not an ordinary web-design advertisement.
+
+==================================================
+01 — CRITICAL CREATIVE RULE
+NO FLOATING BUSINESS CARDS!
+==================================================
+
+This is the most important instruction.
+
+The eight website demos MUST NOT look like:
+- Business cards.
+- Small floating rectangles.
+- Generic presentation slides.
+- Simple UI cards.
+- Dashboard tiles.
+- Thumbnail galleries.
+- Flat screenshot panels.
+- Identical browser windows.
+- Basic PowerPoint-style animations.
+
+Instead, create EIGHT IMMERSIVE, PHOTOGRAPHIC, CINEMATIC WEBSITE WORLDS.
+
+Imagine each website transforming into a living digital environment.
+
+Large photographic hero sections, breathtaking imagery, sophisticated typography, layered website sections, navigation interfaces, and beautiful interactive-looking elements should emerge together as one coherent digital experience.
+
+Each demo must be visually spectacular.
+
+The websites should feel alive, expansive, luxurious, realistic, and visually rich.
+
+Imagine premium digital architecture rather than floating interface cards.
+
+The designs may contain websites within transparent dimensional display surfaces, but the emphasis must be on breathtaking photography and complete premium layouts, not visible rectangular borders.
+
+Use immersive edge-to-edge website compositions, subtle dimensional layering, elegant visual transitions, and extraordinary depth.
+
+==================================================
+02 — REFERENCE: REAL BISEL DIGITAL DEMOS
+==================================================
+
+BEFORE DESIGNING THE ANIMATION:
+
+Visit:
+https://biseldigital.com/
+
+Find the section:
+"Mira cómo se vería tu web"
+
+Study the eight example websites linked from that section.
+
+Their actual themes are:
+
+1. Clínica Dental Ejemplo
+2. Inmobiliaria Ejemplo
+3. Estudio Jurídico Ejemplo
+4. Tienda Ejemplo
+5. Estudio Ejemplo — Arquitectura
+6. Inglés Ejemplo — Profesora
+7. Valentina Ejemplo — Modelo
+8. Martín Ejemplo — Concejal
+
+These are the MANDATORY eight demo themes.
+
+Open each available demo and study its real visual identity, imagery, website layout, composition, design language, and key website features.
+
+Whenever technically possible, capture clean, high-resolution screenshots of the actual demo pages and use their visual content as the foundation for the cinematic animation.
+
+Do not replace these eight subjects with unrelated industries.
+
+CREATIVE FREEDOM:
+
+You may dramatically enhance the cinematic presentation, lighting, depth, scale, and visual choreography of each website.
+
+However, preserve the recognizable business category and general design concept of each original example.
+
+The objective is NOT to display ordinary screenshots.
+
+The objective is to transform the reference websites into extraordinary cinematic visual experiences.
+
+If the live demo pages cannot be accessed, use the available Bisel Digital homepage previews and the following verified design descriptions. Create original illustrative visual compositions where necessary, without falsely claiming they are exact captures.
+
+==================================================
+03 — THE EIGHT CINEMATIC WEBSITE WORLDS
+==================================================
+
+DEMO 01 — PREMIUM DENTAL CLINIC
+
+Create an impressive luxury dental clinic website experience.
+
+Visual centerpiece:
+A beautiful, ultra-realistic, sunlit modern dental clinic with refined architecture, elegant medical interiors, and natural professional healthcare photography.
+
+Website elements:
+- Expansive photographic hero.
+- Sophisticated medical typography.
+- Premium appointment booking CTA.
+- Elegant services section.
+- Specialist profiles.
+- Clean healthcare navigation.
+
+Cinematic transformation:
+The clinic image expands from the monitor, filling a large floating digital environment.
+
+The website interface appears within the scene with incredible clarity.
+
+Soft light, layered depth, and beautiful architectural photography create an immersive medical website.
+
+DEMO 02 — LUXURY REAL ESTATE
+
+Create a breathtaking architectural property website.
+
+Visual centerpiece:
+A photorealistic luxury residence or extraordinary modern apartment tower, beautiful windows, sunset light, architectural sophistication, and cinematic wide-angle photography.
+
+Website elements:
+- Full-bleed property hero image.
+- Property search interface.
+- Elegant price and location typography.
+- Refined gallery layout.
+- Property detail sections.
+- Premium contact CTA.
+
+Cinematic transformation:
+The architectural image appears to extend beyond its original website boundaries.
+
+Subtle dimensional layering separates the building from the background while website navigation floats naturally in perspective.
+
+The architecture remains the hero, not the UI container.
+
+DEMO 03 — PREMIUM LAW FIRM
+
+Create a prestigious and powerful legal-services website.
+
+Visual centerpiece:
+Impressive architectural interiors, refined offices, elegant material textures, editorial professional photography, and a confident institutional atmosphere.
+
+Website elements:
+- Sophisticated typography.
+- Full-width cinematic hero.
+- Elegant practice-area navigation.
+- Attorney profiles.
+- Strong consultation CTA.
+- Beautiful editorial composition.
+
+Cinematic transformation:
+The website emerges as a dramatic combination of architectural imagery and beautifully controlled dark graphical layers.
+
+Use precise lighting, depth, and restrained luxury.
+
+DEMO 04 — LUXURY E-COMMERCE
+
+Create a spectacular premium online store.
+
+Visual centerpiece:
+Beautifully art-directed luxury lifestyle products, sophisticated studio photography, realistic materials, elegant product imagery, and extraordinary visual polish.
+
+Website elements:
+- Hero photography.
+- Refined product gallery.
+- Elegant product descriptions.
+- Beautiful shopping interface.
+- Clear purchase CTA.
+- Tasteful responsive storefront composition.
+
+Cinematic transformation:
+Large product imagery emerges from the website with subtle dimensional depth.
+
+The storefront appears as an immersive shopping experience, not a collection of product cards.
+
+DEMO 05 — ARCHITECTURE STUDIO
+
+Create an extraordinary minimalist architecture portfolio.
+
+Visual centerpiece:
+An iconic contemporary residence with strong geometric forms, natural light, architectural landscaping, and world-class editorial photography.
+
+Website elements:
+- Large architectural hero.
+- Minimal navigation.
+- Portfolio imagery.
+- Project filtering.
+- Project detail content.
+- Elegant contact section.
+
+Cinematic transformation:
+Architectural photography expands beyond the website canvas.
+
+Foreground architecture and background landscape separate slightly in 3D space.
+
+The entire website feels like a luxury architectural presentation brought to life.
+
+DEMO 06 — PREMIUM ENGLISH EDUCATION
+
+Create a modern, refined website for a professional English teacher.
+
+Visual centerpiece:
+A beautiful contemporary learning environment, natural portraits, sophisticated education photography, and a premium editorial aesthetic.
+
+Website elements:
+- Large photographic hero.
+- Clear course levels.
+- Class schedules and formats.
+- Course information.
+- Attractive enrollment CTA.
+- Elegant educational navigation.
+
+Cinematic transformation:
+The site expands into a luminous learning environment, combining beautiful photographs, typography, and subtle dimensional animation.
+
+Avoid generic school graphics and childish educational illustrations.
+
+DEMO 07 — HIGH-FASHION MODEL PORTFOLIO
+
+Create an extraordinary high-fashion editorial website for a professional model.
+
+Visual centerpiece:
+Large, breathtaking fashion photography with professional studio lighting, magazine-quality composition, sophisticated styling, and elegant fashion-editorial aesthetics.
+
+Website elements:
+- Full-screen fashion hero.
+- Editorial portfolio gallery.
+- Minimal typography.
+- Professional profile.
+- Model measurements and booking information.
+- Elegant contact interface.
+
+Cinematic transformation:
+The fashion photograph becomes the dominant visual element.
+
+Editorial photography moves through three-dimensional layers with dramatic but elegant depth.
+
+The website feels like a luxury fashion magazine transformed into a digital experience.
+
+DEMO 08 — MODERN CIVIC INFORMATION WEBSITE
+
+Create a refined, contemporary civic website for a fictional municipal councilor.
+
+Visual centerpiece:
+High-quality realistic neighborhood, urban improvement, public-space, community meeting, and civic participation photography.
+
+Website elements:
+- Elegant full-width editorial hero.
+- Public proposals and activities.
+- Community information.
+- Events and public agenda.
+- Press resources.
+- Citizen contact section.
+
+Cinematic transformation:
+Large urban and community imagery merges with a sophisticated, accessible website interface.
+
+The result feels transparent, institutional, modern, and visually polished.
+
+No real politician, party logo, campaign slogan, political flags, or partisan symbols.
+
+==================================================
+04 — SOURCE IMAGE PRESERVATION
+==================================================
+
+The attached original computer-and-smartphone image is the foundation of the entire animation.
+
+Do not replace the computer.
+Do not replace the smartphone.
+Do not alter the device geometry.
+Do not distort the original screen.
+Do not replace the surrounding scene with unrelated environments.
+
+Preserve the original image's recognizable composition and photographic quality.
+
+The computer remains the central physical object.
+
+The smartphone reinforces responsive website design.
+
+The visual spectacle must appear to originate from the ACTUAL computer screen.
+
+Use appropriate perspective mapping, foreground masking, depth compositing, and realistic occlusion to achieve this.
+
+Because the reference is a single photograph, use believable 2.5D and 3D compositing rather than claiming to reconstruct physically unseen surfaces.
+
+==================================================
+05 — THE MAIN CINEMATIC EFFECT
+==================================================
+
+The entire animation is built around one unforgettable effect:
+
+THE SCREEN BECOMES A PORTAL TO EIGHT DIGITAL WORLDS.
+
+Sequence:
+
+1. The original computer screen begins to glow subtly.
+
+2. A fine champagne-gold line travels across the screen surface.
+
+3. The first website activates.
+
+4. Its beautiful photographic hero begins expanding forward from the display.
+
+5. The website separates into controlled dimensional layers.
+
+6. The complete visual experience emerges from the monitor.
+
+7. It accelerates toward the RIGHT.
+
+8. While moving, it rotates smoothly in three-dimensional space.
+
+9. It follows a realistic orbital trajectory around the computer.
+
+10. The next website emerges, following a different trajectory.
+
+Repeat this process until all EIGHT unique worlds have emerged.
+
+IMPORTANT:
+
+Each world should appear visually DIFFERENT.
+
+Use varied photographic compositions, subtle lighting variations, different spatial orientations, and distinct movement choreography.
+
+Do not make every website fly out in exactly the same manner.
+
+Do not use identical motion templates for all eight.
+
+==================================================
+06 — EXTRAORDINARY 3D ORBITAL CHOREOGRAPHY
+==================================================
+
+The eight website worlds must travel around the computer in actual perceived three-dimensional space.
+
+Mandatory motion behavior:
+
+- All eight initially emerge toward the RIGHT.
+- Their trajectories curve naturally.
+- They rotate gracefully around the computer.
+- Their apparent scale changes with depth.
+- Some move behind the computer.
+- Others pass elegantly in front.
+- They occupy different orbital heights and depths.
+- Their movement remains fluid and carefully choreographed.
+
+The viewer must clearly perceive a sophisticated orbital system.
+
+Do not create a flat 2D circular carousel.
+
+Do not line up eight images in a basic grid.
+
+Do not simply rotate eight rectangles around one central point.
+
+Make the movement feel like beautifully art-directed digital architecture traveling through space.
+
+At the cinematic climax, the eight worlds create an extraordinary visual constellation around the computer.
+
+At least TWO website experiences should remain visually dominant and large enough to appreciate their imagery, while the others move through supporting depth planes.
+
+Near the final moment, all eight should be identifiable in a balanced overall composition.
+
+Avoid excessive overlaps and visual clutter.
+
+==================================================
+07 — VISUAL EFFECTS AND PHOTOREALISM
+==================================================
+
+Visual direction:
+
+Luxury technology commercial.
+Ultra-realistic imagery.
+High-end architectural visualization.
+Sophisticated cinematic lighting.
+Premium digital motion design.
+
+Use:
+
+- Realistic perspective.
+- Three-dimensional parallax.
+- Subtle volumetric illumination.
+- Controlled depth of field.
+- Cinematic motion blur.
+- Physically convincing scale changes.
+- Elegant light streaks.
+- Realistic photographic contrast.
+- Soft reflections.
+- Beautiful shadow transitions.
+- Smooth acceleration and deceleration.
+- Subtle atmospheric particles.
+- Champagne-gold edge illumination.
+- Restrained screen glow.
+
+As a website world emerges, its edges may briefly glow with thin golden light.
+
+Once fully outside the screen, the glow should diminish, allowing the photographic content to dominate.
+
+The websites should feel substantial and visually alive rather than transparent holographic cards.
+
+CRITICAL:
+Avoid neon overload, excessive blue holograms, colorful glowing borders, cyberpunk clichés, glitch effects, cheap particle explosions, fantasy portals, and cluttered motion graphics.
+
+Create believable cinematic futurism.
+
+==================================================
+08 — BRAND IDENTITY
+==================================================
+
+Brand:
+BISEL DIGITAL
+
+Official website:
+https://biseldigital.com
+
+Visual colors:
+
+Graphite: #16181C
+Warm ivory: #F3EFE7
+Champagne gold: #C6A66B
+Secondary text: #3A3D44
+
+Gold gradient:
+#9C7F48 → #E6D3A3 → #C6A66B
+
+Typography:
+Syne for headings.
+Inter for supporting information.
+
+If original logo assets are available, use them without modification.
+
+Never invent or redraw the Bisel Digital logo.
+
+Do not place the Bisel Digital logo on each fictional demo as though these were all the same brand.
+
+The eight demo websites must retain their distinct visual identities.
+
+Use Bisel Digital branding mainly in the main composition and final brand reveal.
+
+==================================================
+09 — CINEMATIC TIMELINE
+==================================================
+
+TOTAL DURATION:
+28 seconds.
+
+FRAME RATE:
+30 FPS.
+
+00:00–00:03
+THE AWAKENING
+
+Begin with the original image.
+
+Subtle camera push-in.
+Natural cinematic lighting.
+Elegant reflections.
+
+A soft champagne-gold pulse travels through the computer screen.
+
+00:03–00:07
+FIRST EMERGENCE
+
+The dental clinic world emerges from the monitor.
+
+Large photorealistic medical imagery expands forward.
+
+The website glides toward the RIGHT and begins orbiting.
+
+The real-estate world follows with breathtaking architectural photography.
+
+00:07–00:12
+THE DIGITAL UNIVERSE OPENS
+
+The legal website emerges.
+
+Then the luxury e-commerce experience.
+
+Then the architecture portfolio.
+
+Each moves outward and joins the three-dimensional choreography.
+
+Emphasize different photographic compositions and visual transitions.
+
+00:12–00:16
+EIGHT WORLDS IN MOTION
+
+The English education site emerges.
+
+The fashion portfolio follows with dramatic editorial photography.
+
+Finally, the civic website appears with cinematic community imagery.
+
+All eight visual experiences are now outside the screen.
+
+00:16–00:23
+THE SPECTACULAR ORBIT
+
+This is the most visually extraordinary part of the video.
+
+All eight digital worlds travel around the computer.
+
+Use:
+- cinematic orbital camera composition;
+- realistic depth crossings;
+- controlled perspective shifts;
+- beautiful photographic movement;
+- light trails;
+- sophisticated parallax;
+- precise timing;
+- dynamic but elegant visual rhythm.
+
+Make the eight environments feel like an interconnected constellation of premium websites.
+
+The motion should be mesmerizing without becoming chaotic.
+
+00:23–00:26
+THE GRAND COMPOSITION
+
+Gradually slow the movement.
+
+Arrange the worlds in an extraordinary balanced formation around the computer.
+
+Maintain large, immersive photographic visuals.
+
+All eight categories should be identifiable.
+
+The computer remains the visual center.
+
+00:26–00:28
+THE BRAND REVEAL
+
+Bring the focus back to the original computer and smartphone.
+
+Elegantly reveal:
+
+BISEL DIGITAL
+
+Que tu web responda antes que tú
+
+biseldigital.com
+
+Use a beautiful minimal fade and restrained gold detailing.
+
+Finish with an elegant, cinematic sense of completion.
+
+==================================================
+10 — REMOTION TECHNICAL EXECUTION
+==================================================
+
+You must CREATE AND RENDER the actual video using Remotion inside Codex.
+
+Do not produce only a concept or storyboard.
+
+Use:
+
+- React
+- TypeScript
+- Remotion
+- Three.js
+- @remotion/three when suitable
+- React Three Fiber where appropriate
+- Deterministic frame-based animation
+- Perspective-correct texture mapping
+- Depth-aware compositing
+- Foreground/background occlusion
+- Reusable animation components
+
+Recommended structure:
+
+SourceScene
+ComputerScreenPortal
+WebsiteWorld
+WebsiteEmergence
+OrbitalChoreography
+CinematicLighting
+BrandReveal
+
+Build eight individual website experience components or high-resolution visual assets.
+
+Where possible, capture real demo screenshots from biseldigital.com using Playwright or another suitable screenshot workflow.
+
+For improved realism, create large photographic visual layers from each website's imagery.
+
+Use those layers to construct multidimensional compositions.
+
+Avoid replacing websites with basic colored rectangles.
+
+Every website should contain recognizable, visually impressive design content.
+
+Respect deterministic Remotion rendering.
+
+Avoid uncontrolled timers.
+Avoid random motion without fixed seeds.
+Avoid incompatible package versions.
+Avoid missing textures or broken assets.
+
+Implement correct z-order, masks, and compositing so objects realistically pass in front of or behind the source computer.
+
+If WebGL creates rendering issues, use a reliable hybrid 2.5D solution with perspective-correct animated planes, image layering, and masks.
+
+Do not sacrifice the final rendered result simply to use a more complex technical approach.
+
+==================================================
+11 — SOUND DESIGN
+==================================================
+
+Create an elegant futuristic soundscape.
+
+Opening:
+Subtle atmospheric electronic ambience.
+
+Activation:
+Refined tonal pulse.
+
+Each emergence:
+Soft premium cinematic whoosh.
+
+Orbital climax:
+Layered spatial movement, subtle rising energy, and an elegant cinematic musical crescendo.
+
+Final brand reveal:
+Minimal polished sonic resolution.
+
+Avoid exaggerated science-fiction effects, harsh transitions, loud electronic dance music, or generic corporate advertising jingles.
+
+Use only audio assets that are actually available and appropriately licensed or provided.
+
+If suitable audio cannot be obtained, render a polished silent video rather than using unrelated audio.
+
+==================================================
+12 — QUALITY AND OUTPUT
+==================================================
+
+Primary video:
+1920 × 1080
+16:9 landscape
+30 FPS
+28 seconds
+H.264 MP4
+High-quality rendering
+
+Composition:
+BiselDigital_BeyondTheScreen
+
+Filename:
+bisel-digital-beyond-the-screen.mp4
+
+Also deliver:
+- Complete editable Remotion project.
+- Source assets.
+- High-quality preview.
+- Representative keyframes/contact sheet.
+- Final verified MP4.
+
+Before completion, inspect important frames throughout the video.
+
+Check:
+- Source image preservation.
+- Correct screen perspective.
+- Exactly eight distinct website subjects.
+- Visually rich photographic worlds.
+- No business-card appearance.
+- Rightward emergence.
+- Convincing depth and orbital movement.
+- Foreground/background crossings.
+- Smooth motion.
+- Readable, attractive UI where visible.
+- Beautiful final composition.
+- Correct Bisel Digital branding.
+- No missing images, font errors, blank frames, or artifacts.
+
+Fix visible errors before the final render.
+
+==================================================
+13 — FINAL CREATIVE DIRECTIVE
+==================================================
+
+Think beyond ordinary website animation.
+
+This is not a presentation of eight small websites.
+
+This is the cinematic birth of eight extraordinary digital worlds from one computer screen.
+
+Every experience should look like a premium, visually rich website brought to life through sophisticated dimensional motion.
+
+The eight websites should feel like immersive photographs, living interfaces, and beautifully designed digital environments.
+
+Make the visual quality extraordinary.
+
+Prioritize:
+1. Photographic realism.
+2. Immersive full-scale website imagery.
+3. Elegant 3D movement.
+4. Credible visual depth.
+5. Spectacular creative execution.
+6. Bisel Digital brand sophistication.
+
+Be ambitious with the design, but technically rigorous.
+
+Inspect the source image.
+Research the eight reference demos.
+Construct the assets.
+Build the Remotion composition.
+Render the video.
+Review the frames.
+Correct problems.
+Export and verify the MP4.
+
+Do not stop after generating source code.
+
+FINAL CREATIVE VISION:
+
+"A single screen becomes the gateway to eight extraordinary digital worlds."
+
+Make it unforgettable.

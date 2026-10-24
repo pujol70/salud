@@ -1,0 +1,29 @@
+{
+  "name": "bisel-digital-beyond-the-screen",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "remotion studio --no-open --port=3002",
+    "typecheck": "tsc --noEmit",
+    "render": "node scripts/render-film.cjs",
+    "check:motion": "node scripts/check-choreography.cjs",
+    "delivery": "node scripts/prepare-delivery.cjs",
+    "assets:bake": "node scripts/bake-interfaces.cjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "5.2.8",
+    "@fontsource-variable/syne": "5.2.6",
+    "@remotion/cli": "4.0.538",
+    "@remotion/fonts": "4.0.538",
+    "@remotion/media": "4.0.538",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.538"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "sharp": "0.34.5",
+    "typescript": "5.9.3"
+  }
+}
